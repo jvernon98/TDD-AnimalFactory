@@ -17,8 +17,8 @@ public class CatTest {
     // TODO - Create tests for `setBirthDate(Date birthDate)` DONE
     // TODO - Create tests for `void eat(Food food)` DONE
     // TODO - Create tests for `Integer getId()` DONE
-    // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
-    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
+    // TODO - Create test to check Animal inheritance; google search `java instanceof keyword` DONE
+    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword` Done
 
 
     @Test
@@ -61,7 +61,6 @@ public class CatTest {
         Cat cat = new Cat(null, null, null);
 
         cat.setBirthDate(newBirthDate);
-
         Date actualBirthDate = cat.getBirthDate();
         Date expectedBirthDate = new Date(7 / 16 / 1998);
 
