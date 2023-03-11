@@ -92,5 +92,5 @@ public class CatHouseTest {
     // TODO - Create tests for `void remove(Integer id)` DONE
     // TODO - Create tests for `void remove(Cat cat)`DONE
     // TODO - Create tests for `Cat getCatById(Integer id)`DONE
-    // TODO - Create tests for `Integer getNumberOfCats()`
+    // TODO - Create tests for `Integer getNumberOfCats()` DONE
 }
