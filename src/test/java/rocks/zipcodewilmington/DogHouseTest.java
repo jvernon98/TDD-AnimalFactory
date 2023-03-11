@@ -16,9 +16,9 @@ import java.util.Date;
 public class DogHouseTest {
 
     // TODO - Create tests for `void add(Dog dog)` DONE
-    // TODO - Create tests for `void remove(Integer id)`
-    // TODO - Create tests for `void remove(Dog dog)`
-    // TODO - Create tests for `Dog getDogById(Integer id)`
+    // TODO - Create tests for `void remove(Integer id)` DONE 
+    // TODO - Create tests for `void remove(Dog dog)`DONE
+    // TODO - Create tests for `Dog getDogById(Integer id)` DONE
     // TODO - Create tests for `Integer getNumberOfDogs()` DONE
 
 // command n for new test
@@ -54,4 +54,47 @@ public class DogHouseTest {
         DogHouse.getNumberOfDogs();
     }
 
+    @Test
+    public void testGetID() {
+
+        Dog dog1 = new Dog(null, null, 1);
+        DogHouse.add(dog1);
+
+        Dog actualID = DogHouse.getDogById(1);
+
+        Assert.assertEquals(actualID, dog1);
+    }
+
+    @Test
+    public void removeDog() {
+        Integer expectedNumberOfDogs = 0;
+        Dog dog1 = new Dog(null, null, null);
+        DogHouse.clear();
+        DogHouse.add(dog1);
+
+        //When
+        DogHouse.remove(dog1);
+        Integer actualNumberOfDogs = DogHouse.getNumberOfDogs();
+
+        //Then
+        Assert.assertEquals(expectedNumberOfDogs, actualNumberOfDogs);
+
+    }
+
+    @Test
+    public void removeDogByID() {
+        Integer expectedNumberOfDogs = 0;
+        Dog ID = new Dog(null, null, 1);
+        DogHouse.add(ID);
+        DogHouse.clear();
+
+
+        //When
+        DogHouse.remove(1);
+        Integer actualNumberOfDogs = DogHouse.getNumberOfDogs();
+
+
+        //Then
+        Assert.assertEquals(expectedNumberOfDogs, actualNumberOfDogs);
+    }
 }
